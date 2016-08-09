@@ -45,12 +45,8 @@ class RestRoutes {
 
 
 	function wprr_admin_menu() {
-
 		add_menu_page('WP Rest Routes', 'WP Rest Routes', 'manage_options', 'edit.php?post_type=rest-routes', '',  'dashicons-share');
 		add_submenu_page( 'edit.php?post_type=rest-routes', 'Routes', 'My Routes', 'manage_options', 'edit.php?post_type=rest-routes');
-		//add_submenu_page( 'edit.php?post_type=rest-routes', 'Settings', 'Settings', 'manage_options', 'wprr-settings', 'wprr_admin_menu_settings' );
-		//add_submenu_page( 'edit.php?post_type=rest-routes', 'Help', 'Help', 'manage_options', 'wprr-help', 'wprr_admin_menu_help' );
-
 	}
 
 	function wprr_admin_menu_routes(){
@@ -125,7 +121,6 @@ class RestRoutes {
 
 	function wprr_query_builder_callback( $post ) {
 
-		// Add a nonce field so we can check for it later.
 		wp_nonce_field( 'wprr_save_meta_box_data', 'wprr_meta_box_nonce' );
 
 		$output = '';

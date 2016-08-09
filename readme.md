@@ -1,3 +1,3 @@
 ## WordPress Plugin
 
-Building custom endpoints for WP REST API made easy.
+WordPress plugin for building custom endpoints through WP REST API without any coding.
